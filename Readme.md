@@ -1,4 +1,2 @@
-# Rosa's Readme file (vim) for Android Quiz app:
-:wq
+# Rosa's Readme file for Android Quiz app:
 
-:
