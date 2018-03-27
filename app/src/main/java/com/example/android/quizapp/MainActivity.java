@@ -1,4 +1,4 @@
-package com.example.android.MainActivity;
+package com.example.android.quizapp;
 
 
 import android.content.Context;
@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity
+
 {
     int points;
     String toastMessage;
@@ -320,5 +322,6 @@ public class MainActivity extends AppCompatActivity
 
 
 //..........................Fill in the blank..........................
+
 
 
