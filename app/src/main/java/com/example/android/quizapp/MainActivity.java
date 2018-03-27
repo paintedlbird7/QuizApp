@@ -1,283 +1,151 @@
-// 1 TODO fix multiple choice right answer CheckBoxes
-// decide on
-// Outcome "Sorry wrong answer"  TODOs fix why it appears & stays should go away after clicking on another option
-// or Checkbox is clicked checkbox is not clicked
-// or toast "selected right answer, wrong answer"
-
-
-// 2 TODO (4.) & TODO toast score
-
-
-// 3 Rubic TODO add score sheet...............
-//   TODO Submit Button App includes a button for the user to submit their answers and receive a score.
-
-// 4 TODO grading button displays a toast....................................................
-
-// 5 TODO The grading logic checks each answer correctly. The app accurately calculates
-// the number of correct answers and does not include incorrect answers in the count.
-
-// 6 TODO Note: When applicable, in the grading logic remember to check that the correct answers are checked
-// AND the incorrect answers are not checked.........................................
-
-// finishing touches, color, design, pic? theme subject of the quiz, add questions, add answers
-// 7. TODO add color, red WRONG green CORRECT
-
 package com.example.android.quizapp;
 
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.Map;
 
+public class MainActivity extends AppCompatActivity
 
-public class MainActivity extends AppCompatActivity {
-
-
-
-    RadioGroup answer1;
-    Button select;
-    RadioButton items;
-
-    CheckBox android;
-    CheckBox java;
-    Button display;
-
-
-    Map<String, String> questions = new HashMap<String, String>();
-    int questionNo = 1;
-    TextView outcome;
-    TextView question;
-    CheckBox answer11;
-    CheckBox answer2;
-    CheckBox answer3;
-    Button display2;
-
-
-    public void onAnswer11Click(View v) {
-        if (v instanceof CheckBox){
-            CheckBox c = (CheckBox) v;
-            if (c.isChecked()){
-                Toast.makeText(this, "Checkbox is checked!",Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Checkbox is not checked!",Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    public void onAnswer2Click(View v) {
-        if (v.getTag() == "Correct") {
-            outcome.setText("Well Done!");
-            questionNo++;
-            setQuestion();
-        } else {
-            outcome.setText("Sorry, wrong answer!");
-        }
-
-    }
-
-    public void onAnswer3Click(View v) {
-        if (v.getTag() == "Correct") {
-            outcome.setText("Well Done!");
-            questionNo++;
-            setQuestion();
-        } else {
-            outcome.setText("Sorry, wrong answer!");
-        }
-
-    }
-
-
+{
+    int points;
+    String toastMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
-
-//<!-- (1.) & (2.)radio group with Toast of selected answer—>
-
-
-        answer1 = (RadioGroup) findViewById(R.id.radiogroup);
-        select = (Button) findViewById(R.id.select);
-
-        android = (CheckBox) findViewById(R.id.android);
-        java = (CheckBox) findViewById(R.id.java);
-        display = (Button) findViewById(R.id.display);
-
-        answer11 = (CheckBox) findViewById(R.id.Answer11);
-        answer2 = (CheckBox) findViewById(R.id.Answer2);
-        answer3 = (CheckBox) findViewById(R.id.Answer3);
-        question = (TextView) findViewById(R.id.Question);
-        outcome = (TextView) findViewById(R.id.Outcome);
-        display2 = (Button) findViewById(R.id.display2);
-
-        //outcome setText('');
-
-        questions.put("Question1", "What is Kylo Ren's Real Name?");
-        questions.put("Right1", "Ben Solo");
-        questions.put("WrongA1", "Anakin Skywalker");
-        questions.put("WrongB1", "Mr Cuddles");
-
-        setQuestion();
-
-
-
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                int selectid = answer1.getCheckedRadioButtonId();
-                items = (RadioButton) findViewById(selectid);
-                String s1 = items.getText().toString();
-                Toast.makeText(MainActivity.this, "Selected item is: " + s1, Toast.LENGTH_LONG).show();
-            }
-
-
-
-
-        });
-
-
-
-
-
-
-
-
-
-        //...........................checked boxes as shown in video tutorial..............................
-        // TODO T/F multiple choice questions only select one at a time
-
-
-        display.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                String s1;
-                if (android.isChecked())
-                {
-                    Toast.makeText(MainActivity.this, "Android is selected",Toast.LENGTH_LONG).show();
-                }
-                if (java.isChecked())
-
-                {
-                    Toast.makeText(MainActivity.this, "Java is selected",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-
-
-
-
-
-
-        display2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                String s2;
-                if (answer11.isChecked())
-                {
-                    Toast.makeText(MainActivity.this, "Answer11 is selected",Toast.LENGTH_LONG).show();
-                }
-                if (answer2.isChecked())
-
-                {
-                    Toast.makeText(MainActivity.this, "Answer2 is selected",Toast.LENGTH_LONG).show();
-                }
-                if (answer3.isChecked())
-
-                {
-                    Toast.makeText(MainActivity.this, "Answer3 is selected",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
     }
 
-    private void setQuestion() {
+    public void getFridaAnswers(View view) {
+        RadioButton animalMonkey = (RadioButton) findViewById(R.id.animal_monkey);
+        boolean monkeyIsChecked = animalMonkey.isChecked();
+
+        if (monkeyIsChecked) {
+            points += 1;
+        } else {
+            toastMessage = "Sorry Wrong Song Answer";
+            getToast();
+        }
     }
 
-    private void findViewById(Button select) {
+    public void getExhibitParisAnswers(View v) {
+        RadioButton exhibitParisOption = (RadioButton) findViewById(R.id.paris_true);
+        boolean trueIsChecked = exhibitParisOption.isChecked();
+
+        if (trueIsChecked) {
+            points += 1;
+        } else {
+            toastMessage = "Sorry Wrong Group Answer";
+            getToast();
+        }
     }
 
 
+    public void getCheckBoxAnswers(View view) {
+        CheckBox diegoAnswer = (CheckBox) findViewById(R.id.spouse_diego);
+        boolean isDiego = diegoAnswer.isChecked();
+
+        CheckBox paintingsAnswer = (CheckBox) findViewById(R.id.spouse_paintings);
+        boolean isPaintings = paintingsAnswer.isChecked();
+
+        if (isDiego && isPaintings) {
+            points += 2;
+        } else {
+            toastMessage = " Answer not correct or complete.  Please try again. ";
+            getToast();
+        }
+    }
 
 
+    //--------------------------
+
+    public void getTextAnswer() {
+        EditText sayingAnswer = (EditText) findViewById(R.id.saying_volar);
+        String sayingNamed = sayingAnswer.getText().toString();
+
+        if (sayingNamed.toLowerCase().contains("volar")) {
+            points += 1;
+        } else {
+            toastMessage = " Sorry the end of the saying isn't correct.  Try again.";
+        }
+    }
+
+    public void getToast() {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, toastMessage, duration);
+        toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 0, 0);
+        toast.show();
+    }
+
+    public void createQuizResults(View view) {
+        getTextAnswer();
+        toastMessage = " You scored " + points + " points out of a possible 5 points!";
+        getToast();
+    }
 
 
-    //......................makes radio buttons clickable.for (1.)....................................
+    // To send a email (blank rn)
+    public void submitOrder(View view) {
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio_pirates:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.radio_ninjas:
-                if (checked)
-                    // Ninjas rule
-                    break;
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, "My total score ");
+        intent.putExtra(Intent.EXTRA_TEXT, "You're total score .");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
         }
 
     }
+
 }
 
 
 
 
-//..........................Fill in the blank..........................
 
 
 
-// TODO add score sheet...............Submit Button App includes a button for the user to
-// submit their answers and receive a score.
-// grading button displays a toast....................................................
-
-//TODO The grading logic checks each answer correctly. The app accurately calculates
-// the number of correct answers and does not include incorrect answers in the count.
-//Note: When applicable, in the grading logic remember to check that the correct answers
-// are checked AND the incorrect answers are not checked.........................................
 
 
+
+
+//    /**
+//     * Create Summary of the Order
+//     *
+//     * @param name of customer
+//     * @param score of the quiz
+//     * @return text summary
+//     */
+//    private String createQuizResults(String name, int score) {
+//        String submitOrder = "Name: " + name;
+//        submitOrder += "\nAdd whipped cream? ";
+////        priceMessage += "\nAdd chocolate? " + addChocolate;
+////        priceMessage += "\nQuantity: " + quantity;
+////        priceMessage += "\nTotal: = $" + price;
+////        priceMessage += "\nThank you!";
+//        return submitOrder;
 //
-//    public void quizScore (View view){
-//        // Find the user's name
-//        QuizScore nameField = (QuizScore) findViewById(R.id.name_field);
-//        String name = nameField.quizScore().toString();
-
-
-
-
-////        //Show an error message as a toast
-////        Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
-////        // Exit this method early because there's nothing left to do
-////        return;
-
-
-
-
+//    }
 //
-//public void onAndroidClick(View v) {
-//        if (v.getTag() == "Correct") {
-//        outcome.setText("Well Done!");
-//        int questionNo = 0;
-//        questionNo++;
-//        setQuestion();
-//        } else {
-//        outcome.setText("Sorry, wrong answer!");
-//        }
-//
-//        }
-//
+//}
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="your_Score_Is">your _Score_Is</string>
 </resources>
