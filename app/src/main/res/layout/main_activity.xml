@@ -1,212 +1,211 @@
 <ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    tools:context="com.example.android.MainActivity.MainActivity">
+ android:layout_height="match_parent"
+android:layout_width="match_parent"
+tools:context="com.example.android.quizapp.MainActivity">
 
 
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:paddingLeft="24dp"
+       android:paddingRight="16dp"
+       android:paddingTop="16dp">
+      //android:background="@drawable/cash2">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingRight="16dp"
-        android:paddingTop="16dp">
-        //android:background="@drawable/cash2">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="36dp"
+          android:layout_gravity="center"
+          android:text="Frida Kahlo"
+          android:textSize="30dp"
+          android:textColor="@android:color/holo_red_light"
+          android:textAllCaps="true"/>
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="36dp"
-        android:layout_gravity="center"
-        android:text="Frida Kahlo"
-        android:textSize="30dp"
-        android:textColor="@android:color/holo_red_light"
-        android:textAllCaps="true"/>
+      <TextView
 
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Frida Kahlo painted a painting with this animal on her shoulder?"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textAllCaps="true" />
-
-
-
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Frida Kahlo painted a painting with this animal on her shoulder?"
+          android:layout_marginBottom="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_margin="10dp"
+          android:textSize="20sp"
+          android:fontFamily="sans-serif"
+          android:textColor="@android:color/holo_blue_dark"
+          android:textAllCaps="true" />
 
 
 
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/radio_stacking">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bird"
-                android:textSize="16sp"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/animal_bird"
-                android:onClick="getFridaAnswers"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gorilla"
-                android:layout_marginLeft="10dp"
-                android:textSize="16sp"
-                android:id="@+id/animal_gorilla"
-                android:onClick="getFridaAnswers"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monkey"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="16sp"
-                android:id="@+id/animal_monkey"
-                android:onClick="getFridaAnswers"/>
-
-        </RadioGroup>
-
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textAllCaps="true"
-            android:text="Frida Khalo was married to whom? Check all that apply"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:checked="false"
-            android:text="Leon Trotsky"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/spouse_leon"
-            android:onClick="getCheckBoxAnswers" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:checked="false"
-            android:text="Diego Rivera"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/spouse_diego"
-            android:onClick="getCheckBoxAnswers" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Her Paintings"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/spouse_paintings"
-            android:onClick="getCheckBoxAnswers" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tina Modotti"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/spouse_tina"
-            android:onClick="getCheckBoxAnswers" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Frida Khalo exhibited her paintings in Paris and Mexico before her death in 1954."
-            android:layout_margin="20dp"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:textColor="@android:color/holo_blue_dark"
-            />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="True"
-                android:textSize="16sp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/group_pays"
-                android:onClick="getFridaAnswers" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="False"
-                android:textSize="16sp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/group_oop"
-                android:onClick="getFridaAnswers"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I Don't Know"
-                android:textSize="16sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="5dp"
-                android:id="@+id/group_earn"
-                android:onClick="getFridaAnswers"/>
-
-        </RadioGroup>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How does this saying end: Pies, ¿para qué los quiero si tengo alas pa’ ______?”:"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:textColor="@android:color/black" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Volar"
-            android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/saying_volar"
-            android:inputType="text" />
+      <RadioGroup
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginLeft="10dp"
+          android:id="@+id/radio_stacking">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit Answers"
-            android:textSize="16sp"
-            android:layout_margin="20dp"
-            android:textAllCaps="true"
-            android:onClick="createQuizResults"
-            />
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Bird"
+             android:textSize="16sp"
+             android:layout_marginLeft="10dp"
+             android:id="@+id/animal_bird"
+             android:onClick="getFridaAnswers"/>
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Gorilla"
+             android:layout_marginLeft="10dp"
+             android:textSize="16sp"
+             android:id="@+id/animal_gorilla"
+             android:onClick="getFridaAnswers"/>
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Monkey"
+             android:layout_marginLeft="10dp"
+             android:layout_marginBottom="5dp"
+             android:textSize="16sp"
+             android:id="@+id/animal_monkey"
+             android:onClick="getFridaAnswers"/>
 
-    </LinearLayout>
+      </RadioGroup>
+
+      <TextView
+
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/holo_blue_dark"
+          android:textAllCaps="true"
+          android:text="Frida Khalo was married to whom? Check all that apply"
+          android:layout_margin="10dp"
+          android:textSize="20sp"
+          android:fontFamily="sans-serif" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:checked="false"
+          android:text="Leon Trotsky"
+          android:textSize="16sp"
+          android:layout_marginLeft="20dp"
+          android:id="@+id/spouse_leon"
+          android:onClick="getCheckBoxAnswers" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:checked="false"
+          android:text="Diego Rivera"
+          android:textSize="16sp"
+          android:layout_marginLeft="20dp"
+          android:id="@+id/spouse_diego"
+          android:onClick="getCheckBoxAnswers" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Her Paintings"
+          android:textSize="16sp"
+          android:layout_marginLeft="20dp"
+          android:id="@+id/spouse_paintings"
+          android:onClick="getCheckBoxAnswers" />
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Tina Modotti"
+          android:textSize="16sp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginBottom="5dp"
+          android:id="@+id/spouse_tina"
+          android:onClick="getCheckBoxAnswers" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Frida Khalo exhibited her paintings in Paris and Mexico before her death in 1954."
+          android:layout_margin="20dp"
+          android:textSize="20sp"
+          android:fontFamily="sans-serif"
+          android:textColor="@android:color/holo_blue_dark"
+          />
+
+      <RadioGroup
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="True"
+             android:textSize="16sp"
+             android:layout_marginLeft="20dp"
+             android:id="@+id/group_pays"
+             android:onClick="getFridaAnswers" />
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="False"
+             android:textSize="16sp"
+             android:layout_marginLeft="20dp"
+             android:id="@+id/group_oop"
+             android:onClick="getFridaAnswers"/>
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="I Don't Know"
+             android:textSize="16sp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginBottom="5dp"
+             android:id="@+id/group_earn"
+             android:onClick="getFridaAnswers"/>
+
+      </RadioGroup>
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="How does this saying end: Pies, ¿para qué los quiero si tengo alas pa’ ______?”:"
+          android:layout_margin="10dp"
+          android:textSize="20sp"
+          android:fontFamily="sans-serif"
+          android:textColor="@android:color/black" />
+
+      <EditText
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="Volar"
+          android:textSize="16sp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginBottom="5dp"
+          android:id="@+id/saying_volar"
+          android:inputType="text" />
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Submit Answers"
+          android:textSize="16sp"
+          android:layout_margin="20dp"
+          android:textAllCaps="true"
+          android:onClick="createQuizResults"
+          />
+
+   </LinearLayout>
 </ScrollView>
 
 
@@ -227,100 +226,100 @@
 
 
 
-        <!--&lt;!&ndash;<Button&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_below="@+id/checkbox"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/display"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:text="display"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_below="@+id/checkbox"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/display"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="display"/>&ndash;&gt;-->
 
-        <!--&lt;!&ndash;..................................CheckBoxes..multiple right answers..........&ndash;&gt;-->
+    <!--&lt;!&ndash;..................................CheckBoxes..multiple right answers..........&ndash;&gt;-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/Question"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="16dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--android:text="3. multiple choice right answer questions"-->
-            <!--android:textColor="@android:color/holo_blue_dark"-->
-            <!--android:textAllCaps="true"-->
-            <!--tools:layout_editor_absoluteX="165dp"-->
-            <!--tools:layout_editor_absoluteY="43dp" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/Question"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:text="3. multiple choice right answer questions"-->
+    <!--android:textColor="@android:color/holo_blue_dark"-->
+    <!--android:textAllCaps="true"-->
+    <!--tools:layout_editor_absoluteX="165dp"-->
+    <!--tools:layout_editor_absoluteY="43dp" />-->
 
-        <!--<CheckBox-->
-            <!--android:id="@+id/Answer11"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:paddingLeft="24dp"-->
-            <!--android:text="Answer11"-->
-            <!--android:onClick="onAnswer11Click"-->
-            <!--android:textSize="16sp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentStart="true"-->
-            <!--android:checked="false" />-->
+    <!--<CheckBox-->
+    <!--android:id="@+id/Answer11"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="24dp"-->
+    <!--android:text="Answer11"-->
+    <!--android:onClick="onAnswer11Click"-->
+    <!--android:textSize="16sp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:checked="false" />-->
 
-        <!--<CheckBox-->
-            <!--android:id="@+id/Answer2"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:paddingLeft="24dp"-->
-            <!--android:text="Answer2"-->
-            <!--android:onClick="onAnswer2Click"-->
-            <!--android:textSize="16sp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentStart="true"-->
-            <!--android:checked="false" />-->
+    <!--<CheckBox-->
+    <!--android:id="@+id/Answer2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="24dp"-->
+    <!--android:text="Answer2"-->
+    <!--android:onClick="onAnswer2Click"-->
+    <!--android:textSize="16sp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:checked="false" />-->
 
-        <!--<CheckBox-->
-            <!--android:id="@+id/Answer3"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:paddingLeft="24dp"-->
-            <!--android:text="Answer3"-->
-            <!--android:onClick="onAnswer3Click"-->
-            <!--android:textSize="16sp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentStart="true"-->
-            <!--android:checked="false" />-->
+    <!--<CheckBox-->
+    <!--android:id="@+id/Answer3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="24dp"-->
+    <!--android:text="Answer3"-->
+    <!--android:onClick="onAnswer3Click"-->
+    <!--android:textSize="16sp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:checked="false" />-->
 
-        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/Outcome"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_marginBottom="16dp"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:text="Outcome"&ndash;&gt;-->
-            <!--&lt;!&ndash;tools:layout_editor_absoluteY="385dp"&ndash;&gt;-->
-            <!--&lt;!&ndash;tools:layout_editor_absoluteX="163dp" />&ndash;&gt;-->
-        <!--&lt;!&ndash;<Button&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_below="@+id/display2"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/display2"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:text="display2"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/Outcome"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Outcome"&ndash;&gt;-->
+    <!--&lt;!&ndash;tools:layout_editor_absoluteY="385dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;tools:layout_editor_absoluteX="163dp" />&ndash;&gt;-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_below="@+id/display2"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/display2"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="display2"/>&ndash;&gt;-->
 
 
-        <!--&lt;!&ndash;..........................Fill in the blank..........................&ndash;&gt;-->
+    <!--&lt;!&ndash;..........................Fill in the blank..........................&ndash;&gt;-->
 
-        <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="16dp"-->
-        <!--android:layout_marginTop="16dp"-->
-        <!--android:text="3. Ipson lorem grey all caps"-->
-        <!--android:textColor="@android:color/holo_blue_dark"-->
-        <!--android:textAllCaps="true"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:text="3. Ipson lorem grey all caps"-->
+    <!--android:textColor="@android:color/holo_blue_dark"-->
+    <!--android:textAllCaps="true"/>-->
 
-        <!--<EditText-->
-        <!--android:id="@+id/name_field"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:hint="fill in the blank question"-->
-        <!--android:inputType="textAutoComplete"/>-->
-        <!--<requestFocus />-->
+    <!--<EditText-->
+    <!--android:id="@+id/name_field"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:hint="fill in the blank question"-->
+    <!--android:inputType="textAutoComplete"/>-->
+    <!--<requestFocus />-->
 
 
 
     <!--</LinearLayout>-->
-<!--</ScrollView>-->
+    <!--</ScrollView>-->
