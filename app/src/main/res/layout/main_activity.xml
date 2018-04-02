@@ -1,76 +1,123 @@
 <ScrollView
-xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
- android:layout_height="match_parent"
-android:layout_width="match_parent"
-tools:context="com.example.android.quizapp.MainActivity">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.example.android.quizapp.MainActivity">
 
+   <!--<android.support.v7.widget.AppCompatCheckBox-->
+       <!--android:id="@+id/cbSelected"-->
+       <!--android:layout_width="wrap_content"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--android:backgroundTint="@color/colorAccent"-->
+       <!--android:checked="true"/>-->
+
+   <!--<android.support.v7.widget.AppCompatRadioButton-->
+       <!--android:id="@+id/rb"-->
+       <!--app:buttonTint="@color/colorAccent"-->
+   <!--android:layout_width="wrap_content"-->
+   <!--android:layout_height="wrap_content"/>-->
 
    <LinearLayout
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical"
        android:paddingLeft="24dp"
        android:paddingRight="16dp"
-       android:paddingTop="16dp">
-      //android:background="@drawable/cash2">
+       android:paddingTop="16dp"
+       >
+
+      <ImageView
+          android:id="@+id/android_cookie_image_view"
+          android:orientation="vertical"
+          android:scaleType="centerCrop"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+         android:background="@drawable/frida3"
+
+      />
+
 
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginBottom="4dp"
+          android:layout_marginBottom="24dp"
           android:layout_marginTop="36dp"
           android:layout_gravity="center"
           android:text="Frida Kahlo"
           android:textSize="30dp"
-          android:textColor="@android:color/holo_red_light"
+          android:textColor="@android:color/holo_blue_bright"
           android:textAllCaps="true"/>
 
-      <TextView
+      <View
+          android:layout_width="283dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="26dp"
+          android:background="@android:color/darker_gray"></View>
 
+      <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Frida Kahlo painted a painting with this animal on her shoulder?"
-          android:layout_marginBottom="16dp"
+          android:layout_marginBottom="4dp"
           android:layout_marginTop="16dp"
-          android:layout_margin="10dp"
+          android:layout_margin="15dp"
           android:textSize="20sp"
           android:fontFamily="sans-serif"
-          android:textColor="@android:color/holo_blue_dark"
-          android:textAllCaps="true" />
+          android:paddingTop="31dp"
+          android:textColor="@android:color/holo_blue_dark" />
+
 
       <RadioGroup
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:orientation="vertical"
           android:layout_marginLeft="10dp"
-          android:id="@+id/radio_stacking">
+          android:layout_marginTop="16dp"
+          android:buttonTint="@color/colorPrimary"
+          android:id="@+id/radio_stacking2">
 
          <RadioButton
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Bird"
              android:textSize="16sp"
-             android:layout_marginLeft="10dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
              android:id="@+id/animal_bird"
-             android:onClick="getFridaAnswers"/>
+             android:buttonTint="@color/colorPrimary"
+             android:onClick="getAnimalAnswers"/>
          <RadioButton
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Gorilla"
-             android:layout_marginLeft="10dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
              android:textSize="16sp"
              android:id="@+id/animal_gorilla"
-             android:onClick="getFridaAnswers"/>
+             android:buttonTint="@color/colorPrimary"
+             android:onClick="getAnimalAnswers"/>
          <RadioButton
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Monkey"
-             android:layout_marginLeft="10dp"
-             android:layout_marginBottom="5dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
              android:textSize="16sp"
              android:id="@+id/animal_monkey"
-             android:onClick="getFridaAnswers"/>
+             android:buttonTint="@color/colorPrimary"
+             android:onClick="getAnimalAnswers"
+             />
+
+         <View
+             android:layout_width="283dp"
+             android:layout_height="3dp"
+             android:layout_marginTop="26dp"
+             android:background="@android:color/darker_gray"></View>
 
       </RadioGroup>
 
@@ -79,11 +126,14 @@ tools:context="com.example.android.quizapp.MainActivity">
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textColor="@android:color/holo_blue_dark"
-          android:textAllCaps="true"
           android:text="Frida Khalo was married to whom? Check all that apply"
-          android:layout_margin="10dp"
           android:textSize="20sp"
+          android:paddingTop="31dp"
+          android:layout_margin="15dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginLeft="10dp"
           android:fontFamily="sans-serif" />
+
 
       <CheckBox
           android:layout_width="wrap_content"
@@ -93,9 +143,14 @@ tools:context="com.example.android.quizapp.MainActivity">
           android:checked="false"
           android:text="Leon Trotsky"
           android:textSize="16sp"
-          android:layout_marginLeft="20dp"
+          android:layout_marginLeft="35dp"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="9dp"
           android:id="@+id/spouse_leon"
-          android:onClick="getCheckBoxAnswers" />
+          android:buttonTint="@color/colorPrimary"
+          android:onClick="getSpouseAnswers" />
+
+
 
       <CheckBox
           android:layout_width="wrap_content"
@@ -105,41 +160,65 @@ tools:context="com.example.android.quizapp.MainActivity">
           android:checked="false"
           android:text="Diego Rivera"
           android:textSize="16sp"
-          android:layout_marginLeft="20dp"
+          android:layout_marginLeft="35dp"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="9dp"
           android:id="@+id/spouse_diego"
-          android:onClick="getCheckBoxAnswers" />
+          android:buttonTint="@color/colorPrimary"
+          android:onClick="getSpouseAnswers" />
 
       <CheckBox
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Her Paintings"
           android:textSize="16sp"
-          android:layout_marginLeft="20dp"
+          android:layout_marginLeft="35dp"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="9dp"
           android:id="@+id/spouse_paintings"
-          android:onClick="getCheckBoxAnswers" />
+          android:buttonTint="@color/colorPrimary"
+          android:onClick="getSpouseAnswers" />
       <CheckBox
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Tina Modotti"
           android:textSize="16sp"
-          android:layout_marginLeft="20dp"
-          android:layout_marginBottom="5dp"
+          android:layout_marginLeft="35dp"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="9dp"
           android:id="@+id/spouse_tina"
-          android:onClick="getCheckBoxAnswers" />
+          android:buttonTint="@color/colorPrimary"
+          android:onClick="getSpouseAnswers"
+          />
+
+      <View
+          android:layout_width="283dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="26dp"
+          android:background="@android:color/darker_gray"></View>
+
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Frida Khalo exhibited her paintings in Paris and Mexico before her death in 1954."
-          android:layout_margin="20dp"
           android:textSize="20sp"
           android:fontFamily="sans-serif"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="16dp"
+          android:layout_margin="15dp"
+          android:paddingTop="31dp"
           android:textColor="@android:color/holo_blue_dark"
           />
+
+
 
       <RadioGroup
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:orientation="vertical">
+          android:orientation="vertical"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="16dp"
+          android:id="@+id/paris_true2">
 
          <RadioButton
              android:layout_width="wrap_content"
@@ -147,184 +226,118 @@ tools:context="com.example.android.quizapp.MainActivity">
              android:text="True"
              android:textSize="16sp"
              android:layout_marginLeft="20dp"
-             android:id="@+id/group_pays"
-             android:onClick="getFridaAnswers" />
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
+             android:id="@+id/paris_true"
+             android:buttonTint="@color/colorPrimary"
+             android:onClick="getExhibitAnswers" />
          <RadioButton
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="False"
              android:textSize="16sp"
              android:layout_marginLeft="20dp"
-             android:id="@+id/group_oop"
-             android:onClick="getFridaAnswers"/>
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
+             android:id="@+id/paris_false"
+             android:buttonTint="@color/colorPrimary"
+             android:onClick="getExhibitAnswers"/>
          <RadioButton
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="I Don't Know"
              android:textSize="16sp"
              android:layout_marginLeft="20dp"
-             android:layout_marginBottom="5dp"
-             android:id="@+id/group_earn"
-             android:onClick="getFridaAnswers"/>
+             android:layout_marginBottom="4dp"
+             android:layout_marginTop="9dp"
+             android:buttonTint="@color/colorPrimary"
+             android:id="@+id/paris_idk"
+             android:onClick="getExhibitAnswers"/>
 
       </RadioGroup>
+
+      <View
+          android:layout_width="283dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="26dp"
+          android:background="@android:color/darker_gray"></View>
 
 
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="How does this saying end: Pies, ¿para qué los quiero si tengo alas pa’ ______?”:"
-          android:layout_margin="10dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="16dp"
+          android:layout_margin="15dp"
           android:textSize="20sp"
           android:fontFamily="sans-serif"
-          android:textColor="@android:color/black" />
+          android:paddingTop="31dp"
+          android:textColor="@android:color/holo_blue_dark" />
 
       <EditText
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:hint="Volar"
+          android:hint="type answer here ..."
           android:textSize="16sp"
           android:layout_marginLeft="20dp"
-          android:layout_marginBottom="5dp"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="9dp"
           android:id="@+id/saying_volar"
-          android:inputType="text" />
+          android:inputType="text"
+          android:imeOptions="actionDone"/>
+
+      <View
+          android:layout_width="283dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="26dp"
+          android:background="@android:color/darker_gray"></View>
 
       <Button
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Submit Answers"
           android:textSize="16sp"
-          android:layout_margin="20dp"
+          android:layout_gravity="center"
+          android:layout_marginTop="36dp"
           android:textAllCaps="true"
-          android:onClick="createQuizResults"
+          android:id="@+id/quizscore"
+          android:onClick="getAllPoints"
           />
 
 
 
       <Button
-          android:id="@+id/button3"
+          android:id="@+id/send_email"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_marginTop="6dp"
-          android:onClick="submitOrder"
+          android:layout_marginTop="36dp"
+          android:onClick="sendEmail"
+          android:textAllCaps="true"
           android:text="Send to Email" />
 
+      <View
+          android:layout_width="283dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="26dp"
+          android:background="@android:color/darker_gray"></View>
+
+
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Reset Quiz"
+          android:textSize="16sp"
+          android:layout_gravity="center"
+          android:layout_marginTop="36dp"
+          android:textAllCaps="true"
+          android:id="@+id/resetquiz"
+          android:onClick="resetQuizResults"
+          />
+
+
    </LinearLayout>
+
+
 </ScrollView>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--&lt;!&ndash;<Button&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_below="@+id/checkbox"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:id="@+id/display"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:text="display"/>&ndash;&gt;-->
-
-    <!--&lt;!&ndash;..................................CheckBoxes..multiple right answers..........&ndash;&gt;-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/Question"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginBottom="16dp"-->
-    <!--android:layout_marginTop="16dp"-->
-    <!--android:text="3. multiple choice right answer questions"-->
-    <!--android:textColor="@android:color/holo_blue_dark"-->
-    <!--android:textAllCaps="true"-->
-    <!--tools:layout_editor_absoluteX="165dp"-->
-    <!--tools:layout_editor_absoluteY="43dp" />-->
-
-    <!--<CheckBox-->
-    <!--android:id="@+id/Answer11"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:paddingLeft="24dp"-->
-    <!--android:text="Answer11"-->
-    <!--android:onClick="onAnswer11Click"-->
-    <!--android:textSize="16sp"-->
-    <!--android:layout_alignParentLeft="true"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:checked="false" />-->
-
-    <!--<CheckBox-->
-    <!--android:id="@+id/Answer2"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:paddingLeft="24dp"-->
-    <!--android:text="Answer2"-->
-    <!--android:onClick="onAnswer2Click"-->
-    <!--android:textSize="16sp"-->
-    <!--android:layout_alignParentLeft="true"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:checked="false" />-->
-
-    <!--<CheckBox-->
-    <!--android:id="@+id/Answer3"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:paddingLeft="24dp"-->
-    <!--android:text="Answer3"-->
-    <!--android:onClick="onAnswer3Click"-->
-    <!--android:textSize="16sp"-->
-    <!--android:layout_alignParentLeft="true"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:checked="false" />-->
-
-    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-    <!--&lt;!&ndash;android:id="@+id/Outcome"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_marginBottom="16dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:text="Outcome"&ndash;&gt;-->
-    <!--&lt;!&ndash;tools:layout_editor_absoluteY="385dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;tools:layout_editor_absoluteX="163dp" />&ndash;&gt;-->
-    <!--&lt;!&ndash;<Button&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_below="@+id/display2"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:id="@+id/display2"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:text="display2"/>&ndash;&gt;-->
-
-
-    <!--&lt;!&ndash;..........................Fill in the blank..........................&ndash;&gt;-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginBottom="16dp"-->
-    <!--android:layout_marginTop="16dp"-->
-    <!--android:text="3. Ipson lorem grey all caps"-->
-    <!--android:textColor="@android:color/holo_blue_dark"-->
-    <!--android:textAllCaps="true"/>-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/name_field"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:hint="fill in the blank question"-->
-    <!--android:inputType="textAutoComplete"/>-->
-    <!--<requestFocus />-->
-
-
-
-    <!--</LinearLayout>-->
-    <!--</ScrollView>-->
