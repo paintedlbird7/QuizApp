@@ -189,7 +189,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-<<<<<<< HEAD
 
 
 
@@ -241,5 +240,3 @@ public class MainActivity extends AppCompatActivity {
 //            toastMessage = " Sorry the end of the saying isn't correct.  Try again.";
 //        }
 //    }
-=======
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
