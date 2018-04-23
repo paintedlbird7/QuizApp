@@ -2,5 +2,5 @@
 
 ## Frida Kahlo Quiz
 
-A android Quiz App “Frida Kahlo” made in Java using Android Studio 🤔 🧠 🎨 👩🏽‍🎨 ❓
+A android Quiz App “Frida Kahlo” made in Java using Android Studio 🤔 🧠 🎨 👩🏽‍🎨 
 
