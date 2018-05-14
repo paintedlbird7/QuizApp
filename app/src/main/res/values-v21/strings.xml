@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quiz App</string>
     <string name="monkey">Monkey</string>
     <string name="gorilla">Gorilla</string>
     <string name="bird">Bird</string>
@@ -20,6 +20,4 @@
     <string name="type_answer_here">type answer here ...</string>
     <string name="frida_kahlo">Frida Kahlo</string>
     <string name="textview_fontfamily">sans-serif</string>
-    <string name="textview_font_family">sans-serif</string>
-
 </resources>

@@ -1,405 +1,310 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-<<<<<<< HEAD
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorAccent"
     tools:context="com.example.android.quizapp.MainActivity">
 
-   <!--<android.support.v7.widget.AppCompatCheckBox-->
-       <!--android:id="@+id/cbSelected"-->
-       <!--android:layout_width="wrap_content"-->
-       <!--android:layout_height="wrap_content"-->
-       <!--android:backgroundTint="@color/colorAccent"-->
-       <!--android:checked="true"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding24"
+        android:paddingRight="@dimen/padding16"
+        android:paddingTop="@dimen/padding_top16">
 
-   <!--<android.support.v7.widget.AppCompatRadioButton-->
-       <!--android:id="@+id/rb"-->
-       <!--app:buttonTint="@color/colorAccent"-->
-   <!--android:layout_width="wrap_content"-->
-   <!--android:layout_height="wrap_content"/>-->
-=======
- android:layout_height="match_parent"
-android:layout_width="match_parent"
-tools:context="com.example.android.quizapp.MainActivity">
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/frida3"
+            android:orientation="vertical"
+            android:scaleType="centerCrop" />
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:paddingLeft="24dp"
-       android:paddingRight="16dp"
-<<<<<<< HEAD
-       android:paddingTop="16dp"
-       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/layout_mbottom24"
+            android:layout_marginTop="@dimen/layout_top36"
+            android:text="@string/frida_kahlo"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize" />
 
-      <ImageView
-          android:id="@+id/android_cookie_image_view"
-          android:orientation="vertical"
-          android:scaleType="centerCrop"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-         android:background="@drawable/frida3"
+        <View
+            android:layout_width="@dimen/view_layout_width283"
+            android:layout_height="@dimen/view_layout_height3"
+            android:layout_marginTop="@dimen/view_layout_top26"
+            android:background="@android:color/darker_gray"></View>
 
-      />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textview_layout15"
+            android:layout_marginBottom="@dimen/textview_layout4"
+            android:layout_marginTop="@dimen/textview_layout16"
+            android:fontFamily="@string/textview_fontfamily"
+            android:paddingTop="@dimen/textview_padding31"
+            android:text="@string/frida_kahlo_painted_a_painting_with_this_animal_on_her_shoulder"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textview_layout20" />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radiogroup_layout_margins"
+            android:layout_marginTop="@dimen/radiogroup_layout16"
+            android:buttonTint="@color/colorPrimary"
+            android:orientation="vertical">
 
-=======
-       android:paddingTop="16dp">
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="24dp"
-          android:layout_marginTop="36dp"
-          android:layout_gravity="center"
-          android:text="Frida Kahlo"
-          android:textSize="30dp"
-          android:textColor="@android:color/holo_blue_bright"
-          android:textAllCaps="true"/>
-<<<<<<< HEAD
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/radiobutton_layout4"
+                android:layout_marginLeft="@dimen/radiobutton_layout20"
+                android:layout_marginTop="@dimen/radiobutton_layout9"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getAnimalAnswers"
+                android:text="@string/bird"
+                android:textSize="@dimen/radiobutton_textsize16" />
 
-      <View
-          android:layout_width="283dp"
-          android:layout_height="3dp"
-          android:layout_marginTop="26dp"
-          android:background="@android:color/darker_gray"></View>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/radiobutton_layout_top20"
+                android:layout_marginLeft="@dimen/radiobutton_layout_left20"
+                android:layout_marginTop="@dimen/radiobutton_layout_top4"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getAnimalAnswers"
+                android:text="@string/gorilla"
+                android:textSize="@dimen/radiobutton_textsize16sp" />
 
-=======
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Frida Kahlo painted a painting with this animal on her shoulder?"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="16dp"
-          android:layout_margin="15dp"
-          android:textSize="20sp"
-          android:fontFamily="sans-serif"
-<<<<<<< HEAD
-          android:paddingTop="31dp"
-          android:textColor="@android:color/holo_blue_dark" />
+            <RadioButton
+                android:id="@+id/animal_monkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/radiobutton_layout_bottom4"
+                android:layout_marginLeft="@dimen/radiobutton_layout_left20dp"
+                android:layout_marginTop="@dimen/radiobutton_layout_top9"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getAnimalAnswers"
+                android:text="@string/monkey"
+                android:textSize="@dimen/radiobutton_texsize2" />
 
+            <View
+                android:layout_width="@dimen/view_width"
+                android:layout_height="@dimen/view_height"
+                android:layout_marginTop="@dimen/view_top"
+                android:background="@android:color/darker_gray"></View>
 
-=======
-          android:textColor="@android:color/holo_blue_dark"
-          android:textAllCaps="true" />
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <RadioGroup
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-          android:layout_marginLeft="10dp"
-<<<<<<< HEAD
-          android:layout_marginTop="16dp"
-          android:buttonTint="@color/colorPrimary"
-          android:id="@+id/radio_stacking2">
+        </RadioGroup>
 
-=======
-          android:id="@+id/radio_stacking">
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Bird"
-             android:textSize="16sp"
-             android:layout_marginLeft="20dp"
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:id="@+id/animal_bird"
-             android:buttonTint="@color/colorPrimary"
-             android:onClick="getAnimalAnswers"/>
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Gorilla"
-             android:layout_marginLeft="20dp"
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:textSize="16sp"
-             android:id="@+id/animal_gorilla"
-             android:buttonTint="@color/colorPrimary"
-             android:onClick="getAnimalAnswers"/>
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Monkey"
-             android:layout_marginLeft="20dp"
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:textSize="16sp"
-             android:id="@+id/animal_monkey"
-<<<<<<< HEAD
-             android:buttonTint="@color/colorPrimary"
-             android:onClick="getAnimalAnswers"
-             />
-
-         <View
-             android:layout_width="283dp"
-             android:layout_height="3dp"
-             android:layout_marginTop="26dp"
-             android:background="@android:color/darker_gray"></View>
-
-=======
-             android:onClick="getFridaAnswers"/>
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      </RadioGroup>
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textColor="@android:color/holo_blue_dark"
-          android:text="Frida Khalo was married to whom? Check all that apply"
-          android:textSize="20sp"
-          android:paddingTop="31dp"
-          android:layout_margin="15dp"
-          android:layout_marginTop="16dp"
-          android:layout_marginLeft="10dp"
-          android:fontFamily="sans-serif" />
-<<<<<<< HEAD
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textview_margin15"
+            android:layout_marginLeft="@dimen/textview_margin_left"
+            android:layout_marginTop="@dimen/textview_margin_top"
+            android:fontFamily="@string/textview_font_family"
+            android:paddingTop="@dimen/textview_padding"
+            android:text="@string/frida_khalo_was_married_to_whom_check_all_that_apply"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textview_textsize3" />
 
 
-=======
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true"
-          android:checked="false"
-          android:text="Leon Trotsky"
-          android:textSize="16sp"
-          android:layout_marginLeft="35dp"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="9dp"
-          android:id="@+id/spouse_leon"
-<<<<<<< HEAD
-          android:buttonTint="@color/colorPrimary"
-          android:onClick="getSpouseAnswers" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/checkbox_margin4"
+            android:layout_marginLeft="@dimen/checkbox_layout35"
+            android:layout_marginTop="@dimen/checkbox_margin9"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:onClick="getSpouseAnswers"
+            android:text="@string/leon_trotsky"
+            android:textSize="@dimen/checkbox_false" />
 
+        <CheckBox
+            android:id="@+id/spouse_diego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/checkbox_margin_bottom4"
+            android:layout_marginLeft="@dimen/checkbox_margin35"
+            android:layout_marginTop="@dimen/checkbox_margin_top9"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:onClick="getSpouseAnswers"
+            android:text="@string/diego_rivera"
+            android:textSize="@dimen/checkbox_text_size" />
 
+        <CheckBox
+            android:id="@+id/spouse_paintings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="9dp"
+            android:buttonTint="@color/colorPrimary"
+            android:onClick="getSpouseAnswers"
+            android:text="@string/her_paintings"
+            android:textSize="16sp" />
 
-=======
-          android:onClick="getCheckBoxAnswers" />
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true"
-          android:checked="false"
-          android:text="Diego Rivera"
-          android:textSize="16sp"
-          android:layout_marginLeft="35dp"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="9dp"
-          android:id="@+id/spouse_diego"
-<<<<<<< HEAD
-          android:buttonTint="@color/colorPrimary"
-          android:onClick="getSpouseAnswers" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="9dp"
+            android:buttonTint="@color/colorPrimary"
+            android:onClick="getSpouseAnswers"
+            android:text="@string/tina_modotti"
+            android:textSize="16sp" />
 
-=======
-          android:onClick="getCheckBoxAnswers" />
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Her Paintings"
-          android:textSize="16sp"
-          android:layout_marginLeft="35dp"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="9dp"
-          android:id="@+id/spouse_paintings"
-          android:buttonTint="@color/colorPrimary"
-          android:onClick="getSpouseAnswers" />
-      <CheckBox
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Tina Modotti"
-          android:textSize="16sp"
-          android:layout_marginLeft="35dp"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="9dp"
-          android:id="@+id/spouse_tina"
-          android:buttonTint="@color/colorPrimary"
-          android:onClick="getSpouseAnswers"
-          />
+        <View
+            android:layout_width="283dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/darker_gray"></View>
 
-      <View
-          android:layout_width="283dp"
-          android:layout_height="3dp"
-          android:layout_marginTop="26dp"
-          android:background="@android:color/darker_gray"></View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textview_margin"
+            android:layout_marginLeft="@dimen/textview_mleft"
+            android:layout_marginTop="@dimen/textview_mtop"
+            android:fontFamily="sans-serif"
+            android:paddingTop="@dimen/textview_paddingtop"
+            android:text="@string/frida_khalo_exhibited_her_paintings_in_paris_and_mexico_before_her_death_in_1954"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textview_textsize" />
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Frida Khalo exhibited her paintings in Paris and Mexico before her death in 1954."
-          android:textSize="20sp"
-          android:fontFamily="sans-serif"
-          android:layout_marginLeft="10dp"
-          android:layout_marginTop="16dp"
-          android:layout_margin="15dp"
-          android:paddingTop="31dp"
-          android:textColor="@android:color/holo_blue_dark"
-          />
-<<<<<<< HEAD
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/radiogroup_left"
+            android:layout_marginTop="@dimen/radiogroup_top"
+            android:orientation="vertical">
 
+            <RadioButton
+                android:id="@+id/paris_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="@dimen/radiobutton_mleft"
+                android:layout_marginTop="@dimen/radiobutton_mtop"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getExhibitAnswers"
+                android:text="@string/True"
+                android:textSize="@dimen/radiobutton_text_size" />
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/radiobutton_margin4"
+                android:layout_marginLeft="@dimen/radiobutton_mleft20"
+                android:layout_marginTop="@dimen/radiobutton_margin9"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getExhibitAnswers"
+                android:text="@string/False"
+                android:textSize="@dimen/radiobutton_textsize" />
 
-      <RadioGroup
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-          android:layout_marginLeft="10dp"
-          android:layout_marginTop="16dp"
-          android:id="@+id/paris_true2">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/radiobutton4"
+                android:layout_marginLeft="@dimen/radiobutton20"
+                android:layout_marginTop="@dimen/radiobutton9"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="getExhibitAnswers"
+                android:text="@string/i_don_t_know"
+                android:textSize="@dimen/radiobutton16" />
 
-=======
-      <RadioGroup
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="True"
-             android:textSize="16sp"
-             android:layout_marginLeft="20dp"
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:id="@+id/paris_true"
-             android:buttonTint="@color/colorPrimary"
-             android:onClick="getExhibitAnswers" />
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="False"
-             android:textSize="16sp"
-             android:layout_marginLeft="20dp"
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:id="@+id/paris_false"
-             android:buttonTint="@color/colorPrimary"
-             android:onClick="getExhibitAnswers"/>
-         <RadioButton
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="I Don't Know"
-             android:textSize="16sp"
-             android:layout_marginLeft="20dp"
-<<<<<<< HEAD
-             android:layout_marginBottom="4dp"
-             android:layout_marginTop="9dp"
-             android:buttonTint="@color/colorPrimary"
-             android:id="@+id/paris_idk"
-             android:onClick="getExhibitAnswers"/>
+        </RadioGroup>
 
-      </RadioGroup>
+        <View
+            android:layout_width="@dimen/view283"
+            android:layout_height="@dimen/view3"
+            android:layout_marginTop="@dimen/view26"
+            android:background="@android:color/darker_gray"></View>
 
-      <View
-          android:layout_width="283dp"
-          android:layout_height="3dp"
-          android:layout_marginTop="26dp"
-          android:background="@android:color/darker_gray"></View>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/textview15"
+            android:layout_marginLeft="@dimen/textview10"
+            android:layout_marginTop="@dimen/textview_margin16"
+            android:fontFamily="sans-serif"
+            android:paddingTop="@dimen/textview31"
+            android:text="@string/how_does_this_saying_end_pies_para_qu_los_quiero_si_tengo_alas_pa"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textview20" />
 
+        <EditText
+            android:id="@+id/saying_volar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/edittext4"
+            android:layout_marginLeft="@dimen/edittext20"
+            android:layout_marginTop="@dimen/editext9"
+            android:hint="@string/type_answer_here"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:onClick="getSayingAnswers"
+            android:textSize="@dimen/editext16" />
 
-=======
-             android:layout_marginBottom="5dp"
-             android:id="@+id/group_earn"
-             android:onClick="getFridaAnswers"/>
-      </RadioGroup>
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="How does this saying end: Pies, ¿para qué los quiero si tengo alas pa’ ______?”:"
-          android:layout_marginLeft="10dp"
-          android:layout_marginTop="16dp"
-          android:layout_margin="15dp"
-          android:textSize="20sp"
-          android:fontFamily="sans-serif"
-<<<<<<< HEAD
-          android:paddingTop="31dp"
-          android:textColor="@android:color/holo_blue_dark" />
+        <View
+            android:layout_width="@dimen/view_layout283"
+            android:layout_height="@dimen/view_margin_height3"
+            android:layout_marginTop="@dimen/view_margin_top26"
+            android:background="@android:color/darker_gray"></View>
 
-=======
-          android:textColor="@android:color/black" />
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <EditText
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:hint="type answer here ..."
-          android:textSize="16sp"
-          android:layout_marginLeft="20dp"
-          android:layout_marginBottom="4dp"
-          android:layout_marginTop="9dp"
-          android:id="@+id/saying_volar"
-<<<<<<< HEAD
-          android:inputType="text"
-          android:imeOptions="actionDone"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/button_margin36"
+            android:onClick="getAllPoints"
+            android:text="@string/submit_answers"
+            android:textSize="@dimen/button_texsize16" />
 
-      <View
-          android:layout_width="283dp"
-          android:layout_height="3dp"
-          android:layout_marginTop="26dp"
-          android:background="@android:color/darker_gray"></View>
+        <View
+            android:layout_width="@dimen/view_283"
+            android:layout_height="@dimen/view_margin3"
+            android:layout_marginTop="@dimen/view_margin26"
+            android:background="@android:color/darker_gray"></View>
 
-=======
-          android:inputType="text" />
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Submit Answers"
-          android:textSize="16sp"
-          android:layout_gravity="center"
-          android:layout_marginTop="36dp"
-          android:textAllCaps="true"
-<<<<<<< HEAD
-          android:id="@+id/quizscore"
-          android:onClick="getAllPoints"
-          />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/button_36"
+            android:onClick="sendEmail"
+            android:text="@string/send_to_email" />
 
+        <View
+            android:layout_width="@dimen/view_layout283"
+            android:layout_height="@dimen/View_line"
+            android:layout_marginTop="@dimen/view_26"
+            android:background="@android:color/darker_gray"></View>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/Reset_button_margin"
+            android:onClick="resetQuizResults"
+            android:text="@string/reset_quiz"
+            android:textSize="16sp" />
 
-      <Button
-          android:id="@+id/send_email"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginTop="36dp"
-          android:onClick="sendEmail"
-          android:textAllCaps="true"
-          android:text="Send to Email" />
+        <View
+            android:layout_width="@dimen/View"
+            android:layout_height="@dimen/view_3"
+            android:layout_marginTop="@dimen/View_layout_margin"
+            android:background="@android:color/darker_gray"></View>
 
-      <View
-          android:layout_width="283dp"
-          android:layout_height="3dp"
-          android:layout_marginTop="26dp"
-          android:background="@android:color/darker_gray"></View>
-
-
-      <Button
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Reset Quiz"
-          android:textSize="16sp"
-          android:layout_gravity="center"
-          android:layout_marginTop="36dp"
-          android:textAllCaps="true"
-          android:id="@+id/resetquiz"
-          android:onClick="resetQuizResults"
-          />
-
-
-   </LinearLayout>
-
-
-=======
-          android:onClick="createQuizResults"/>
-   </LinearLayout>
->>>>>>> 010412b3e2ae7c2a166d8e2a76ef49a852e54770
+    </LinearLayout>
 </ScrollView>
