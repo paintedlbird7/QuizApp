@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="@dimen/padding24"
         android:paddingRight="@dimen/padding16"
@@ -15,7 +15,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/frida3"
             android:orientation="vertical"
             android:scaleType="centerCrop" />
@@ -113,10 +113,9 @@
 
 
         <CheckBox
+            android:id="@+id/spouse_leon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_marginBottom="@dimen/checkbox_margin4"
             android:layout_marginLeft="@dimen/checkbox_layout35"
             android:layout_marginTop="@dimen/checkbox_margin9"
@@ -130,8 +129,6 @@
             android:id="@+id/spouse_diego"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_marginBottom="@dimen/checkbox_margin_bottom4"
             android:layout_marginLeft="@dimen/checkbox_margin35"
             android:layout_marginTop="@dimen/checkbox_margin_top9"
@@ -154,6 +151,7 @@
             android:textSize="16sp" />
 
         <CheckBox
+            android:id="@+id/spouse_tina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
@@ -241,7 +239,7 @@
             android:paddingTop="@dimen/textview31"
             android:text="@string/how_does_this_saying_end_pies_para_qu_los_quiero_si_tengo_alas_pa"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/textview20" />
+            android:textSize="@dimen/textsize20" />
 
         <EditText
             android:id="@+id/saying_volar"

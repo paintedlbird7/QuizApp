@@ -21,7 +21,7 @@
     <dimen name="edittext20">20dp</dimen>
     <dimen name="editext16">16sp</dimen>
     <dimen name="textview31">31dp</dimen>
-    <dimen name="textview20">20sp</dimen>
+    <dimen name="textsize20">20sp</dimen>
     <dimen name="textview15">15dp</dimen>
     <dimen name="textview_margin16">16dp</dimen>
     <dimen name="textview10">10dp</dimen>
@@ -51,7 +51,6 @@
     <dimen name="padding_top16">16dp</dimen>
     <dimen name="layout_mbottom24">24dp</dimen>
     <dimen name="layout_top36">36dp</dimen>
-    <dimen name="textsize30">30dp</dimen>
     <dimen name="view_layout_width283">283dp</dimen>
     <dimen name="view_layout_height3">3dp</dimen>
     <dimen name="view_layout_top26">26dp</dimen>

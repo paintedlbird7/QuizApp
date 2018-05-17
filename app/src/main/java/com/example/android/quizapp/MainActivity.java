@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    int points = 0;
+    int points;
     String toastMessage;
     private String sendEmail;
     private int quizScore;
@@ -82,7 +82,13 @@ public class MainActivity extends AppCompatActivity {
         CheckBox paintingsAnswer = (CheckBox) findViewById(R.id.spouse_paintings);
         boolean isPaintings = paintingsAnswer.isChecked();
 
-        return (isDiego && isPaintings);
+        CheckBox leonAnswer = (CheckBox) findViewById(R.id.spouse_leon);
+        boolean isLeon = leonAnswer.isChecked();
+
+        CheckBox tinaAnswer = (CheckBox) findViewById(R.id.spouse_tina);
+        boolean isTina = tinaAnswer.isChecked();
+
+        return (isDiego && isPaintings && !isTina && !isLeon);
     }
 
     //get Toast
@@ -107,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (isSpouseQuestionCorrect()) {
-            points += 2;
+            points += 1;
         }
 
         if (isSayingQuestionCorrect()) {
@@ -124,9 +130,16 @@ public class MainActivity extends AppCompatActivity {
         customToast.setDuration(Toast.LENGTH_LONG);
         customToast.show();
 
-        //getTextAnswer();
-        toastMessage = " You scored " + points + " points out of a possible 5 points!";
-        getToast();
+        // if/else statement Gives a different message based on results
+        if (points == 4) {
+            String result = "Congrats!  You got a perfect score!";
+            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+
+        } else {
+            String result = "You scored " + points + " points out of a possible 4 points!";
+            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+        }
+
     }
 
     // To send a email
