@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // To send a email
+    // To send a email HIGHLIGHTED CODE code I'm specifically proud of ability to get sent your score to your email
     public void sendEmail(View view) {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
